@@ -56,7 +56,7 @@ class SocketHandler : TextWebSocketHandler() {
     fun send(id: String, text: String)
     {
         for (webSocketSession in sessions) {
-            webSocketSession.sendMessage(TextMessage("Command Message: $text"))
+            webSocketSession.sendMessage(TextMessage(text))
         }
     }
 }
